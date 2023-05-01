@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Cliente</title>
+</head>
+<body>
+<script src="funcoesCadastroCliente.js"></script>
+    <form action="insertsEcreateClientes.php" method="POST">
+        <legend>Informe o nome do cliente :</legend>
+        </p> 
+        <input type="text" name="nome" required placeholder="Digite o nome do cliente">
+        </p>
+        <legend>Informe o CPF do cliente :</legend>
+        </p>
+        <input type="text" name="cpf" required placeholder="XXX.XXX.XXX-XX" maxlength="11">
+        </p>
+        <h4>Informe o endereço do cliente</h4>
+        </p> 
+        <legend>Estado e cidade : </legend>
+        </p> 
+        <input type="text" name="estado" required placeholder="(SP)" maxlength="2">
+        <input type="text" name="cidade" required>
+        </p> 
+        <legend>Bairro : </legend>
+        </p> 
+        <input type="text" name="bairro" required>
+        </p> 
+        <legend>Rua/AV e número da casa : </legend>
+        </p> 
+        <input type="text" name="rua" required placeholder="Rua/Av. das flores">
+        <input type="text" name="numeroCasa" required placeholder="000" minlength="0">
+        </p> 
+        <legend>Informe o telefone do cliente :</legend>
+        </p>
+        <input type="tel" name="telefone" required placeholder="(XX) XXXXX-XXXX">
+        </p>
+        <legend>Informe o e-mail do cliente :</legend>
+        </p>
+        <input type="email" name="email" placeholder="*******@gmail.com">
+        </p>
+        <button>Enviar</button>
+        </p>
+        <button type="button" onclick="apagarCampos()">Limpar</button>
+    </form>
+</body>
+</html>

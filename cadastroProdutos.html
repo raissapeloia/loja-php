@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <form action="createEinsertsProdutos.php" method="POST">
+        <legend>Informe o nome do produto :</legend>
+        </p>
+        <input type="text" name="nome">
+        </p>
+        <legend>Informe o código do produto :</legend>
+        </p>
+        <input type="text" name="cod">
+        </p>
+        <legend>Informe o preço do produto :</legend>
+        </p>
+        <input type="text" name="preco">
+        </p>
+        <!--Tirar essa parte de estoque daqui pois terá uma parte só para isso-->
+        <legend>Informe a quantidade disponível no estoque :</legend>
+        </p>
+        <input type="number" name="quantEstoque">
+        </p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+function lancarProdutos() {
+document.getElementById('lancarProdutos');
+window.location.href = 'insertProdutos.php';
+}
