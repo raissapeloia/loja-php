@@ -11,13 +11,13 @@ telefone VARCHAR(14) NOT NULL,
 email VARCHAR(50) NOT NULL);
 
 CREATE TABLE IF NOT EXISTS Produtos (
-codigo INT(6) PRIMARY KEY,
+codigo INT(6) PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(30) NOT NULL,
-preco DECIMAL(5,2) NOT NULL,
+preco DECIMAL(14,2) NOT NULL,
 quantEstoque INT (5) NOT NULL);
 
 CREATE TABLE IF NOT EXISTS Estoque (
-codigo INT (6) PRIMARY KEY,
+codigo INT (6) AUTO_INCREMENT PRIMARY KEY ,
 codProduto INT (6),
 quantidade INT (5) NOT NULL,
 FOREIGN KEY (codProduto)
@@ -27,15 +27,16 @@ CREATE TABLE IF NOT EXISTS Vendas (
 codigo INT(6) AUTO_INCREMENT PRIMARY KEY,
 dataVenda date,
 idCliente INT (6) NOT NULL,
-valorTotal DECIMAL (5,2 ) NOT NULL,
+valorTotal DECIMAL (14,2 ) NOT NULL,
 FOREIGN KEY (idCliente)
 REFERENCES Clientes (id));
 
 CREATE TABLE IF NOT EXISTS ItensVendas (
+codItem int(6) AUTO_INCREMENT PRIMARY KEY,
 codVendas INT (6),
 codProduto INT (6),
 quantProduto INT (4),
-valorTotal DECIMAL (5,2) NOT NULL,
+valorTotal DECIMAL (14,2) NOT NULL,
 FOREIGN KEY (codVendas)
 REFERENCES Vendas (codigo),
 FOREIGN KEY (codProduto)
