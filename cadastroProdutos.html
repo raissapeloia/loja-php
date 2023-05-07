@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" type="text/css" href="identando.css" media="screen" />
 </head>
 <body>
-    <form action="createEinsertsProdutos.php" method="POST">
+    <form action="insertsProdutos.php" method="POST">
         <legend>Informe o nome do produto :</legend>
         </p>
         <input type="text" name="nome">
@@ -20,7 +21,6 @@
         </p>
         <input type="text" name="preco">
         </p>
-        <!--Tirar essa parte de estoque daqui pois terá uma parte só para isso-->
         <legend>Informe a quantidade disponível no estoque :</legend>
         </p>
         <input type="number" name="quantEstoque">
@@ -29,8 +29,3 @@
     </form>
 </body>
 </html>
-
-function lancarProdutos() {
-document.getElementById('lancarProdutos');
-window.location.href = 'insertProdutos.php';
-}

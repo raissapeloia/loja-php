@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excluindo tabelas</title>
+    <title>Excluir Cliente</title>
+    <script src="selectsEdeletes.js"></script>
     <link rel="stylesheet" type="text/css" href="identando.css" media="screen" />
 </head>
 <body>
-    Qual tabela deseja excluir ?
-    </p>
-    <input type="text" name="tabela">
-    </p>
-    <button>EXcluir</button>
+    <form action="excluirCliente.php" method="POST">
+        <legend>ID Cliente</legend>
+        <input type="text" name="idCliente">
+        </p>
+        <button>Excluir</button>
+    </form>
 </body>
 </html>

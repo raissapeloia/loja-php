@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Cliente</title>
+    <link rel="stylesheet" type="text/css" href="identando.css" media="screen" />
 </head>
 <body>
 <script src="funcoesCadastroCliente.js"></script>
-    <form action="insertsEcreateClientes.php" method="POST">
+    <form action="insertsClientes.php" method="POST">
         <legend>Informe o nome do cliente :</legend>
         </p> 
         <input type="text" name="nome" required placeholder="Digite o nome do cliente">
@@ -41,9 +42,9 @@
         </p>
         <input type="email" name="email" placeholder="*******@gmail.com">
         </p>
-        <button>Enviar</button>
+        <button class="button">Enviar</button>
         </p>
-        <button type="button" onclick="apagarCampos()">Limpar</button>
+        <button type="button" onclick="apagarCampos()" class="button">Limpar</button>
     </form>
 </body>
 </html>

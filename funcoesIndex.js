@@ -1,37 +1,31 @@
-function cadastrarCliente() {
-    document.getElementById('cadastrar');
-    window.location.href = 'cadastroCliente.html';
+function lancarVendas() {
+  window.location.href = 'vendas.php';
 }
 
-function selectClientes() {
-    document.getElementById('selectClientes');
-    window.location.href = 'selectClientes.php';
+function cadastrarCliente() {
+  window.location.href = 'cadastroCliente.html';
 }
 
 function cadastroProdutos() {
-  document.getElementById('cadastroProdutos');
   window.location.href = 'cadastroProdutos.html';
 }
 
-function selectEstoque() {
-  document.getElementById('selectEstoque');
-  window.location.href = 'selectEstoque.php';
+function controleEstoque() {
+  window.location.href = 'estoque.html';
+}
+
+function selectClientes() {
+  document.getElementById('selectClientes');
+  window.location.href = 'selectClientes.php';
+}
+
+function excluirCliente() {
+  window.location.href = 'excluirCliente.html';
+}
+
+function excluirProduto() {
+  window.location.href = 'excluirProduto.html';
 }
 
 
-function lancarVendas() {
-  document.getElementById('lancarVendas');
-  window.Location.href = 'insertVendas.php';
-}
-
-
-function lancarProdutos() {
-  document.getElementById('lancarProdutos');
-  window.Location.href = 'insertProdutos.php';
-}
-
-function excluirTabela() {
-  document.getElementById('excluirTabela');
-  window.Location.href = 'dropTable';
-}
 
