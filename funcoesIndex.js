@@ -11,7 +11,7 @@ function cadastroProdutos() {
 }
 
 function controleEstoque() {
-  window.location.href = 'estoque.html';
+  window.location.href = 'estoque.php';
 }
 
 function selectClientes() {
@@ -20,11 +20,11 @@ function selectClientes() {
 }
 
 function excluirCliente() {
-  window.location.href = 'excluirCliente.html';
+  window.location.href = 'excluirClienteTemplate.php';
 }
 
 function excluirProduto() {
-  window.location.href = 'excluirProduto.html';
+  window.location.href = 'excluirProdutoTemplate.php';
 }
 
 

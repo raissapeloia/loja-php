@@ -19,9 +19,10 @@ if (isset($_POST['nome'])) {
     $inserts = $x->execute();
 
     if ($inserts) {
-        echo "Cadastro realizado com sucesso!!";
+        echo "<script>alert('Cadastro realizado com sucesso!');location.href=\"cadastroCliente.html\";</script>";
     } else {
-        echo "Não foi possível cadastrar este cliente!" . $mysqli->error;
+        $textoAlerta = "Não foi possível cadastrar este cliente!" . $mysqli->error;
+        echo  "<script>alert(". $textoAlerta .");location.href=\"cadastroCliente.html\";</script>";
     }
 
     $x->close();

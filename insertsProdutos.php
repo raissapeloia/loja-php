@@ -14,9 +14,10 @@ if (isset($_POST['nome'])) {
     $inserts = $x->execute();
 
     if ($inserts) {
-        echo "Produto cadastrado com sucesso!!";
+        echo "<script>alert('Produto cadastrado com sucesso!');location.href=\"cadastroProdutos.html\";</script>";
     } else {
-        echo "Não foi possível cadastrar este produto!" . $mysqli->error;
+        $textoAlerta = "Não foi possível cadastrar este produto!" . $mysqli->error;
+        echo  "<script>alert(". $textoAlerta .");location.href=\"cadastroProdutos.html\";</script>";
     }
 
     $x->close();

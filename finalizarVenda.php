@@ -53,17 +53,27 @@ try {
         $inserts = $x->execute();
     }
 
-    if ($inserts) {
-        echo "Venda cadastrada com sucesso!!";
-    } else {
-        echo "Não foi possível cadastrar esta venda!" . $mysqli->error;
+    for ($i = 0; $i < count($produtos); $i++) {
+        $produto = $produtos[$i];
+        $x = $mysqli->prepare("UPDATE produtos SET quantEstoque=(quantEstoque-?) WHERE codigo=?;");
+        $totalProduto = $produto->getPreco() * $produto->getQuantidade();
+        $codProduto = $produto->getCodigo();
+        $quantidadeProduto = $produto->getQuantidade();
+        $x->bind_param("di", $quantidadeProduto, $codProduto);
+        $inserts = $x->execute();
     }
 
+    if ($inserts) {
+        echo "<script>alert('Venda cadastrada com sucesso!!');location.href=\"vendas.php\";</script>";
+    } else {
+        $textoAlerta = "Não foi possível cadastrar esta venda!" . $mysqli->error;
+        echo  "<script>alert(". $textoAlerta .");location.href=\"vendas.php\";</script>";
+    }
+
+    $_SESSION['produtos'] = null;
     $mysqli->commit();
     $mysqli->close();
 } catch (mysqli_sql_exception $exception) {
     $mysqli->rollback();
     throw $exception;
-} finally {
-    $_SESSION['produtos'] = null;
 }
