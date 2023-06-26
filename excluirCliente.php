@@ -6,6 +6,7 @@
         $idCliente = $_POST['idCliente'];
         $mysqli->begin_transaction();
     
+        // se retornar uma linha existe um cliente vinculado
         $sql = 'select 1 from vendas where idCliente = ' . $idCliente . ' limit 1';
         $result = mysqli_query($mysqli, $sql);
     
@@ -22,7 +23,9 @@
         }
         $mysqli->commit();
         $mysqli->close();
+        // retorna o codigo de erro
     } catch (mysqli_sql_exception $exception) {
+        // true ou false
         $mysqli->rollback();
         throw $exception;
     }

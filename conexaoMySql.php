@@ -1,7 +1,7 @@
 <?php
 
 $hostname = "localhost";
-$bancoDeDados = "loja-php";
+$bancoDeDados = "sistemarenan";
 $usuario = "root";
 $senha = "";
 

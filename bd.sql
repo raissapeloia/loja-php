@@ -16,13 +16,6 @@ nome VARCHAR(30) NOT NULL,
 preco DECIMAL(14,2) NOT NULL,
 quantEstoque INT (5) NOT NULL);
 
-CREATE TABLE IF NOT EXISTS Estoque (
-codigo INT (6) AUTO_INCREMENT PRIMARY KEY ,
-codProduto INT (6),
-quantidade INT (5) NOT NULL,
-FOREIGN KEY (codProduto)
-REFERENCES Produtos (codigo));
-
 CREATE TABLE IF NOT EXISTS Vendas (
 codigo INT(6) AUTO_INCREMENT PRIMARY KEY,
 dataVenda date,
@@ -35,7 +28,7 @@ CREATE TABLE IF NOT EXISTS ItensVendas (
 codItem int(6) AUTO_INCREMENT PRIMARY KEY,
 codVendas INT (6),
 codProduto INT (6),
-quantProduto INT (4),
+quantProduto DECIMAL (4,2),
 valorTotal DECIMAL (14,2) NOT NULL,
 FOREIGN KEY (codVendas)
 REFERENCES Vendas (codigo),
